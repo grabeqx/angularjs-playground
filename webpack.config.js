@@ -2,6 +2,7 @@ var path = require('path');
 var ExtractTextWebpackPlugin = require('extract-text-webpack-plugin');
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var ngAnnotatePlugin = require('ng-annotate-webpack-plugin');
 
 module.exports = {
     mode: 'development',
@@ -20,6 +21,9 @@ module.exports = {
         new HtmlWebpackPlugin({
 			template: 'src/index.html',
 			filename: 'index.html'
+        }),
+        new ngAnnotatePlugin({
+            add: true
         })
     ],
     resolve: {

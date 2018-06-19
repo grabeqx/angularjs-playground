@@ -1,5 +1,6 @@
-require('./controllers/coreController');
+import coreController from './controllers/coreController';
 
-const core = angular.module('core', []);
-
+const core = angular.module('core', [])
+    .controller('coreController', coreController);
+    
 export default core;

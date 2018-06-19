@@ -1,6 +1,7 @@
-require('../controllers');
+class coreController {
+    constructor() {
 
-angular.module('core')
-    .controller('coreController', function() {
+    }
+}
 
-    })
+export default coreController;
