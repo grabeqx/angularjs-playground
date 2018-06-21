@@ -1,10 +1,9 @@
 require('./styles/index.scss');
 
-import core from './core/core.module';
+function getModuleName(module) { return module.name || module.default.name; }
 
-console.log(core);
 const modules = [
-    core.name
+    require('./core/core.module')
 ];
 
 const angularModules = [
@@ -13,9 +12,11 @@ const angularModules = [
     'ngMessages'
 ];
 
-angular.module('playground', [...angularModules, ...modules])
+angular.module('playground', angularModules.concat(modules.map(getModuleName)))
     .config(function($urlRouterProvider, $locationProvider) {
         $urlRouterProvider.otherwise('/');
 
         $locationProvider.html5Mode(true);
     });
+
+    console.log(angular.module('playground'));
