@@ -1,10 +1,10 @@
 class headerController {
     constructor($mdSidenav) {
-        this.test = "asdasd";
+        this.$mdSidenav = $mdSidenav;
     }
 
     toggleNav() {
-        return $mdSidenav('left').toggle();
+        return this.$mdSidenav('left').toggle();
     }
 
 }

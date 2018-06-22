@@ -13,7 +13,7 @@ module.exports = {
     },
     output: {
         path: path.join(__dirname, './dist/'),
-        publicPath: 'http://localhost/',
+        publicPath: '/',
         filename: '[name].js',
     },
     plugins: [

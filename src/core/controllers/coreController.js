@@ -1,6 +1,6 @@
 class coreController {
-    constructor($mdSidenav) {
-        this.test = "test";
+    constructor() {
+        
     }
 }
 
